@@ -2,6 +2,11 @@
 
 #include "ofMain.h"
 #include "ofxBeat.h"
+#include "ofxPostProcessing.h"
+
+
+#define NUM 50
+#define SIZE 10
 
 class testApp : public ofBaseApp{
   
@@ -26,10 +31,18 @@ class testApp : public ofBaseApp{
         ofxBeat beat;
 // 3D Obj
         ofSpherePrimitive sphere;
+    
+        ofSpherePrimitive stars[NUM];
         ofMaterial material;
+    
+        ofLight light1;
+        ofLight light2;
+        ofLight light3;
+    
+        ofTexture mTex;
         vector<ofMeshFace> triangles;
         ofEasyCam easyCam;
+// shader
+        ofShader shader;
 
-
-    
 };
